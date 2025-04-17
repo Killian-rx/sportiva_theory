@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Sportiva Theory - Chaussons d'escalade</title>
+  <meta name="description" content="Découvrez les chaussons d'escalade La Sportiva Theory, pensés pour la performance et l'adhérence.">
+  <link rel="stylesheet" href="web1.css">
+</head>
+<body>
+
+  <header>
+    <h1>La Sportiva Theory</h1>
+    <nav>
+      <ul>
+        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#video">Vidéo</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul> 
+    </nav>
+  </header>
+
+  <main>
+    <section id="presentation" aria-labelledby="titre-presentation">
+      <h2 id="titre-presentation">Des chaussons pour grimper autrement</h2>
+      <p>
+        Les La Sportiva Theory sont des chaussons d'escalade ultra performants conçus pour l'escalade en salle et en bloc. Grâce à leur conception innovante inspirée du mouvement des primates, ils offrent une sensibilité et une précision inégalées.
+      </p>
+      <figure>
+        <img src="image.png" alt="Chaussons d'escalade La Sportiva Theory en noir et jaune">
+        <figcaption>La Sportiva Theory : un design taillé pour la performance.</figcaption>
+      </figure>
+    </section>
+
+    <section id="video" aria-labelledby="titre-video">
+      <h2 id="titre-video">Vidéo de démonstration</h2>
+      <video controls width="600" aria-describedby="description-video">
+        <source src="review_theory.mp4" type="video/mp4">
+        <track src="sous-titres.vtt" kind="subtitles" srclang="fr" label="Français" default>
+        Votre navigateur ne prend pas en charge la vidéo.
+      </video>
+      <p id="description-video">Review des La Sportiva Theory</p>
+    </section>
+
+    <section id="contact" aria-labelledby="titre-contact">
+      <h2 id="titre-contact">Contactez-nous</h2>
+      <form action="traitement.php" method="post">
+        <div>
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" name="nom" required aria-required="true">
+        </div>
+        <div>
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required aria-required="true">
+        </div>
+        <div>
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+        </div>
+        <div>
+          <button type="submit">Envoyer</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Chaussons Escalade Passion - Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
