@@ -85,30 +85,67 @@ a{
     width: 90%;
     max-width: 700px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: #333;
+    font-family: Arial, sans-serif;
 }
 
 #contact h2 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 26px;
 }
 
 #contact form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+}
+
+#contact fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#contact legend {
+    font-weight: bold;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+#contact form div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#contact form label {
+    flex: 0 0 150px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 #contact form input,
-#contact form textarea {
-    width: 80%;
-    padding: 12px;
+#contact form textarea,
+#contact form select {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 16px;
+    background-color: #fff;
+    box-sizing: border-box;
+    min-width: 200px;
 }
 
-button {
+#contact form textarea {
+    resize: vertical;
+}
+
+#contact button {
+    align-self: center;
     background-color: #333;
     color: white;
     padding: 12px 25px;
@@ -119,9 +156,23 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+#contact button:hover {
     background-color: #555;
 }
+
+/* Responsive */
+@media (max-width: 600px) {
+    #contact form div {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #contact form label {
+        flex: none;
+        margin-bottom: 5px;
+    }
+}
+
 
 aside ul {
     list-style: none;
