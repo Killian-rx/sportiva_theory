@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-image: url('fond.png');
+    background-image: url('/src/images/fond.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -71,6 +71,13 @@ video {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+a{
+    color: #f0c040;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
 #contact {
     background-color: #ffffffdd;
     padding: 30px;
@@ -134,3 +141,5 @@ button:hover {
         width: 80%;
     }
 }
+
+
