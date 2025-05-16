@@ -3,58 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>La Sportiva Theory - Chaussons d'escalade</title>
-  <meta name="description" content="Découvrez les chaussons d'escalade La Sportiva Theory, pensés pour la performance et l'adhérence.">
+  <title>Accueil - Chaussons Escalade</title>
+  <meta name="description" content="Page d'accueil de la boutique de chaussons d'escalade La Sportiva">
   <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body>
   <header>
-    <h1>La Gamme de chaussons d'escalade La Sportiva</h1>
-    <nav>
+    <div id="titre">
+      <p>LaGrimpeAccessible</p>
+    </div>
+    <nav aria-label="Navigation principale">
       <ul>
-        <li><a href="#presentation">Présentation</a></li>
-        <li><a href="#video">Vidéo</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#definition">Annuaire</a></li>
-        <li><a href="#liens">Liens utiles</a></li>
-
-      </ul> 
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="produit.html">Produit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="presentation" aria-labelledby="titre-presentation">
-      <h2 id="titre-presentation">Des chaussons pour grimper autrement</h2>
-      <p>
-        Les La Sportiva Theory sont des chaussons d'escalade ultra performants conçus pour l'escalade en <a href=#salle>salle</a> et en <a href=#bloc>bloc</a> Grâce à leur conception innovante inspirée du mouvement des primates, ils offrent une sensibilité et une précision inégalées.
-      </p>
-    </section>
+  <section class="banniere" aria-label="Bannière d'accueil">
+    <h2>Bienvenue sur notre boutique de chaussons d’escalade</h2>
+    <p>Découvrez des modèles innovants, confortables et performants.</p>
+  </section>
 
-    <section id="menu-chaussons" aria-labelledby="titre-menu">
-      <h2 id="titre-menu">Notre sélection de chaussons d’escalade</h2>
-      <div class="chaussons-flex">
-    
-        <div class="chausson-item">
+  <main role="main">
+ 
+    <section id="chausson du moment" aria-labelledby="titre-chausson">
+      <h2 id="titre-chausson">Chaussons du moment</h2>
+      <div class="chausson-moment">
+        <div class="chausson-img">
           <img src="/src/images/theory.png" alt="La Sportiva Theory">
-          <h3>Theory</h3>
+        </div>
+
+        <div class="chausson-description">
+          <h3>LaSportiva Theory</h3>
+          <ul>
+            <li>Conception asymétrique pour un maximum de précision</li>
+            <li>Conception biomimétique pour un maximum de sensations</li>
+            <li>Semelle Vibram® XS-Grip2 pour une adhérence optimale</li>
+          </ul>
+
           <p class="prix">145€</p>
-          <p>Parfait pour le bloc et la salle, ultra sensible et souple.</p>
+          <div class="separateur"></div>
+          <div class="en-savoir-plus">
+            <button class="chausson-boutton" onclick="window.location.href='produit.html'">
+              <p>En savoir plus</p>
+            </button>
+          </div>
         </div>
-    
-        <div class="chausson-item">
-          <img src="/src/images/solution.jpg" alt="La Sportiva Solution">
-          <h3>Solution</h3>
-          <p class="prix">149€</p>
-          <p>Idéal pour les voies techniques, précision et maintien optimal.</p>
-        </div>
-    
-        <div class="chausson-item">
-          <img src="/src/images/otaki.jpg" alt="La Sportiva Otaki">
-          <h3>Otaki</h3>
-          <p class="prix">135€</p>
-          <p>Bonne rigidité, excellent pour les longues sessions en falaise.</p>
-        </div>
-    
       </div>
     </section>
     
@@ -69,72 +65,23 @@
       <p id="description-video">Review des La Sportiva Theory</p>
     </section>
 
-    <section id="contact" aria-labelledby="titre-contact">
-      <h2 id="titre-contact">Contactez-nous</h2>
-      <form action="traitement.php" method="post">
-        <fieldset>
-          <legend>Informations personnelles</legend>
-      
-          <div class="form-group">
-            <label for="nom">Nom <span aria-hidden="true">*</span> :</label>
-            <input type="text" id="nom" name="nom" required aria-required="true">
-          </div>
-      
-          <div class="form-group">
-            <label for="prenom">Prénom <span aria-hidden="true">*</span> :</label>
-            <input type="text" id="prenom" name="prenom" required aria-required="true">
-          </div>
-      
-          <div class="form-group">
-            <label for="email">Email <span aria-hidden="true">*</span> :</label>
-            <input type="email" id="email" name="email" required aria-required="true">
-          </div>
-      
-          <div class="form-group"> 
-            <label for="telephone">Téléphone :</label>
-            <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78">
-          </div>
-        </fieldset>
-      
-        <fieldset>
-          <legend>Message</legend>
-      
-          <div class="form-group"> 
-            <label for="message">Message <span aria-hidden="true">*</span> :</label>
-            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-          </div>
-      
-          <div class="form-group">
-            <label for="plage">Plage horaire de contact :</label>
-            <select id="plage" name="plage">
-              <option value="">-- Choisissez une plage horaire --</option>
-              <option value="matin">Matin (8h - 12h)</option>
-              <option value="apres-midi">Après-midi (12h - 17h)</option>
-              <option value="soir">Soir (17h - 20h)</option>
-            </select>
-          </div>
-        </fieldset>
-      
-        <div>
-          <button type="submit">Envoyer</button>
-        </div>
-      </form>
-      
+    <section id="autre" aria-labelledby="titre-autre">
+      <button class="chausson-autre-boutton" onclick="window.location.href='produit.html'">
+        <p>Voir les autres modèles</p>
+      </button>  
     </section>
 
-     
+    <section id="presentation" aria-labelledby="titre-presentation">
+      <h2 id="titre-presentation">Des chaussons pour grimper autrement</h2>
+      <p>
+        Les La Sportiva Theory sont des chaussons d'escalade ultra performants conçus pour l'escalade en <a href="#salle">salle</a> et en <a href="#bloc">bloc</a>. Grâce à leur conception innovante inspirée du mouvement des primates, ils offrent une sensibilité et une précision inégalées.
+      </p>
+    </section>
 
-    <section id="definition" aria-labelledby="titre-definition">
-      <h2>Annuaire</h2>
-      <h3 id="bloc">Bloc</h3>
-      <p>Le bloc est une discipline d'escalade qui se pratique sur des rochers ou des murs de faible hauteur, sans corde. Les grimpeurs utilisent des matelas de protection appelés crash pads pour amortir les chutes.</p>
-      <h3 id="salle">Salle</h3>
-      <p>L'escalade en salle est une pratique indoor qui permet de grimper sur des murs artificiels équipés de prises. C'est un excellent moyen de s'entraîner et de se préparer pour l'escalade en extérieur.</p>
   </main>
 
-  
   <aside id="liens" aria-labelledby="titre-liens">
-    <h3>Liens utiles</h3>
+    <h3 id="titre-liens">Liens utiles</h3>
     <ul>
       <li><a href="https://www.lasportiva.com/fr/">Site officiel de La Sportiva</a></li>
       <li><a href="https://www.ffme.fr/">Fédération Française de la Montagne et de l'Escalade</a></li>
@@ -144,7 +91,16 @@
 
   <footer>
     <p>&copy; 2025 Chaussons Escalade Passion - Tous droits réservés.</p>
+    <nav aria-label="Liens de bas de page">
+      <ul>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="produit.html">Produit</a></li>
+        <li><a href="#definition">Définitions</a></li>
+      </ul>
+    </nav>
   </footer>
-
 </body>
 </html>
+
+<script src="/src/js/script.js"></script>

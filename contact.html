@@ -1,0 +1,100 @@
+<!-- Fichier : contact.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - Chaussons Escalade</title>
+  <meta name="description" content="Formulaire de contact pour la boutique de chaussons d'escalade">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+
+<div id="confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true" class="modal hidden">
+    <div class="modal-content">
+        <h2 id="modal-title">Confirmer l'envoi</h2>
+        <p>Souhaitez-vous vraiment envoyer ce formulaire ?</p>
+        <div class="modal-actions">
+        <button id="confirm-yes">Oui</button>
+        <button id="confirm-no">Non</button>
+        </div>
+    </div>
+</div>
+
+
+ <header>
+    <div id="titre">
+      <p>Contact</p>
+    </div>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="produit.html">Produit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+    <section id="contact" aria-labelledby="titre-contact">
+      <h2 id="titre-contact">Formulaire de contact</h2>
+      <form action="traitement.php" method="post">
+        <fieldset>
+          <legend>Informations personnelles</legend>
+          <div class="form-group">
+            <label for="nom">Nom <span aria-hidden="true">*</span> :</label>
+            <input type="text" id="nom" name="nom" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="prenom">Prénom <span aria-hidden="true">*</span> :</label>
+            <input type="text" id="prenom" name="prenom" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span> :</label>
+            <input type="email" id="email" name="email" placeholder="exemple@mail.com" required aria-required="true">
+          </div>
+          <div class="form-group"> 
+            <label for="telephone" aria-describedby="format-tel">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}">
+            <small id="format-tel">Format attendu : 06 12 34 56 78</small>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Message</legend>
+          <div class="form-group">
+            <label for="message">Message <span aria-hidden="true">*</span> :</label>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="plage">Plage horaire de contact :</label>
+            <select id="plage" name="plage">
+              <option value="">-- Choisissez une plage horaire --</option>
+              <option value="matin">Matin (8h - 12h)</option>
+              <option value="apres-midi">Après-midi (12h - 17h)</option>
+              <option value="soir">Soir (17h - 20h)</option>
+            </select>
+          </div>
+        </fieldset>
+        <div>
+          <button type="submit">Envoyer</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chaussons Escalade Passion</p>
+    <nav aria-label="Liens de bas de page">
+      <ul>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="produit.html">Produit</a></li>
+        <li><a href="index.html#definition">Définitions</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
+
+<script src="/src/js/script.js"></script>
