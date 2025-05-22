@@ -9,6 +9,9 @@
   <link rel="preload" href="/src/css/style.css" as="style">
   <link rel="stylesheet" href="/src/css/style.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="/src/css/style.css"></noscript>
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
   <header>
@@ -62,7 +65,7 @@
 
     <section id="video" aria-labelledby="titre-video">
       <h2 id="titre-video">Vidéo de démonstration</h2>
-      <video controls width="600" aria-describedby="description-video">
+      <video controls width="600" height="338" aria-describedby="description-video">
         <source src="/src/ressources/review_theory.mp4" type="video/mp4">
         <track src="subtitles.vtt" kind="subtitles" srclang="fr" label="Français" default>
         Votre navigateur ne prend pas en charge la vidéo.
