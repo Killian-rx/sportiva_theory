@@ -68,8 +68,14 @@ nav ul li a:hover {
 }
 
 .chausson-img {
-    width: 50%;
+    width: 30%;
     padding: 10px;
+}
+
+.chausson-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .chausson-description {
@@ -147,14 +153,36 @@ video {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-aside{
-    color: #333;
+a {
     text-decoration: none;
+    color: #333;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-aside:hover {
+a:hover {
+    color: #f0c040;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.titre-liens ul li {
+    margin: 10px 0;
+}
+
+.titre-liens ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.titre-liens ul li a:hover {
     color: #f0c040;
 }
 
@@ -218,7 +246,7 @@ footer{
 
 .chausson-item .prix {
     font-weight: bold;
-    color: #007BFF;
+    color: #333;
     margin-bottom: 10px;
 }
 
@@ -361,12 +389,6 @@ footer{
         flex: none;
         margin-bottom: 5px;
     }
-}
-
-aside ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 /* Responsive Design */
