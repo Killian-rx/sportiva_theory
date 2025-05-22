@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Accueil - Chaussons Escalade</title>
   <meta name="description" content="Page d'accueil de la boutique de chaussons d'escalade La Sportiva">
-  <link rel="stylesheet" href="/src/css/style.css">
+  <!-- Preload and async-load main CSS -->
+  <link rel="preload" href="/src/css/style.css" as="style">
+  <link rel="stylesheet" href="/src/css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/src/css/style.css"></noscript>
 </head>
 <body>
   <header>
@@ -33,7 +36,10 @@
       <h2 id="titre-chausson">Chaussons du moment</h2>
       <div class="chausson-moment">
         <div class="chausson-img">
-          <img src="/src/images/theory.png" alt="La Sportiva Theory">
+          <picture>
+            <source type="image/webp" srcset="/src/images/theory.webp">
+            <img src="/src/images/theory.png" alt="La Sportiva Theory" width="400" height="300" loading="lazy">
+          </picture>
         </div>
 
         <div class="chausson-description">
@@ -96,8 +102,8 @@
       </ul>
     </nav>
   </footer>
+<script src="/src/js/script.js" defer></script>
 </body>
-<script src="/src/js/script.js"></script>
 </html>
 
 

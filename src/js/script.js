@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('form');
+  if (!form) return; // exit if there is no form on this page
   const modal = document.getElementById('confirmation-modal');
   const yesBtn = document.getElementById('confirm-yes');
   const noBtn = document.getElementById('confirm-no');

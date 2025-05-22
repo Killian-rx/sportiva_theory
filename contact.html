@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact - Chaussons Escalade</title>
   <meta name="description" content="Formulaire de contact pour la boutique de chaussons d'escalade">
-  <link rel="stylesheet" href="/src/css/style.css">
+  <!-- Preload and async-load main CSS -->
+  <link rel="preload" href="/src/css/style.css" as="style">
+  <link rel="stylesheet" href="/src/css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/src/css/style.css"></noscript>
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
 

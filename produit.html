@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Produit - Chaussons Escalade</title>
   <meta name="description" content="Découvrez nos modèles de chaussons La Sportiva">
-  <link rel="stylesheet" href="/src/css/style.css">
+  <!-- Preload and async-load main CSS -->
+  <link rel="preload" href="/src/css/style.css" as="style">
+  <link rel="stylesheet" href="/src/css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/src/css/style.css"></noscript>
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
   <header>
@@ -29,19 +35,22 @@
       <h2 id="titre-menu">Notre sélection</h2>
       <div class="chaussons-flex">
         <div class="chausson-item">
-          <img src="/src/images/theory.png" alt="La Sportiva Theory">
+          <picture>
+            <source type="image/webp" srcset="/src/images/theory.png">
+            <img src="/src/images/theory.png" alt="La Sportiva Theory" width="250" height="250" loading="lazy">
+          </picture>
           <h3>Theory</h3>
           <p class="prix">145€</p>
           <p>Ultra sensible et souple, idéal pour bloc et salle.</p>
         </div>
         <div class="chausson-item">
-          <img src="/src/images/solution.jpg" alt="La Sportiva Solution">
+          <img src="/src/images/solution.jpg" alt="La Sportiva Solution" width="250" height="250" loading="lazy">
           <h3>Solution</h3>
           <p class="prix">149€</p>
           <p>Précision pour voies techniques.</p>
         </div>
         <div class="chausson-item">
-          <img src="/src/images/otaki.jpg" alt="La Sportiva Otaki">
+          <img src="/src/images/otaki.jpg" alt="La Sportiva Otaki" width="250" height="250" loading="lazy">
           <h3>Otaki</h3>
           <p class="prix">135€</p>
           <p>Bonne rigidité, idéal falaise.</p>
@@ -68,6 +77,6 @@
       </ul>
     </nav>
   </footer>
+<script src="/src/js/script.js" defer></script>
 </body>
-<script src="/src/js/script.js"></script>
 </html>
